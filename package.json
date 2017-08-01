@@ -1,0 +1,16 @@
+{
+  "name": "angular_frontend_ui",
+  "version": "1.0.0",
+  "description": "My very first angular ui project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/http-server -a localhost -p 8000 -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mina Seddik",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "http-server": "^0.10.0"
+  }
+}

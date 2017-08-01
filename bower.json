@@ -1,0 +1,23 @@
+{
+  "name": "angular_frontend_ui",
+  "description": "My very first angular ui project",
+  "main": "index.js",
+  "authors": [
+    "Mina Seddik"
+  ],
+  "license": "ISC",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.5",
+    "jquery": "^3.2.1",
+    "angular-ui-router": "0.3.1"
+  }
+}
