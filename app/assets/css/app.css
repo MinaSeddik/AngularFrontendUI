@@ -3,8 +3,128 @@ body{
     margin: 0px;
 }
 
-.banner{
-    background : red;
-    width: 100%;
-    height: 70px;
+.navbar-fixed-top {
+    min-height: 60px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 60px;
+}
+
+.navbar-header > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 60px;
+}
+
+
+.navbar-collapse > button {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 10px;
+    line-height: 38px;
+}
+
+.navbar-form {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 40px;
+}
+
+
+.navbar-default {
+    background-color:teal;
+    background-image: none;
+    background-repeat: no-repeat;
+}
+
+.navbar-default .navbar-brand {
+    color: rgba(90, 215, 203, 0.95);
+    font-size: 24px;
+}
+
+.navbar-default .navbar-brand:hover{
+    color: #a6d7cc;
+    -webkit-transform: scale(1.1);
+}
+
+
+.navbar-default .navbar-brand:focus{
+    color: rgba(90, 215, 203, 0.95);
+    -webkit-transform: scale(1.0);
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    background-image: none;
+    color: rgba(90, 215, 203, 0.95);
+    font-size: 18px;
+    font-weight: 500;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    background-image: none;
+    color: teal;
+    background-color: #a6d7cc;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+    color: teal;
+    background-image: none;
+    background-color: #a6d7cc;
+    font-size: 14px;
+    font-weight: 600;
+    border-color: rgba(90, 215, 203, 0.95);
+}
+
+
+.mainContainer{
+    position: absolute;
+    top: 60px;
+}
+
+.wrapper{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width:30em;
+    height:18em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+
+/*.wrapper.input {*/
+    /*margin: 10px;*/
+/*}*/
+
+.wrapper .form-signin-heading{
+    margin: 20px 10px 20px 8px;
+}
+
+.wrapper .checkbox {
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+.wrapper .btn {
+    margin-top: 10px;
+    margin-left: 150px;
+}
+
+.wrapper input {
+    margin-left: 6px;
+    margin-bottom: 8px;
 }

@@ -1,19 +1,39 @@
-'use strict'
+'use strict';
+
+var env = {};
+
+// Import variables if present in env.js
+if (window) {
+    Object.assign(env, window.__env);
+}
 
 var app = angular.module('myApp', ['ui.router']);
 
-app.config(['$qProvider', '$stateProvider', '$urlRouterProvider', function ($qProvider, $stateProvider, $urlRouterProvider) {
+app.constant('__env', env);
 
-    $qProvider.errorOnUnhandledRejections(false);
 
-    $stateProvider.state('home', {
-        url: '/',
-        controller: 'banner',
-        templateUrl : "shared/banner/banner.html"
-    });
+app.config(['$qProvider', '$stateProvider', '$urlRouterProvider', '$logProvider',
+    function ($qProvider, $stateProvider, $urlRouterProvider, $logProvider) {
 
-    $urlRouterProvider.when('', '/');
+        $qProvider.errorOnUnhandledRejections(false);
 
-    $urlRouterProvider.otherwise('/404');
+        $stateProvider
+            .state('login', {
+                url: '/login',
+                controller: 'dashBoardCtrl',
+                templateUrl: "component/login/login.html"
+            })
+            .state('home', {
+                url: '/home',
+                controller: 'dashBoardCtrl',
+                templateUrl: "component/dashboard/dashboard.html"
+            });
 
-}]);
+        $urlRouterProvider.when('', '/');
+        $urlRouterProvider.when('/', '/home');
+        $urlRouterProvider.otherwise('/404');
+
+
+        $logProvider.debugEnabled(__env.enableDebug);
+
+    }]);

@@ -4,25 +4,33 @@
 <head>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-
+    <script src="assets/js/env.js"></script>
     <script src="app.js"></script>
-    <script src="shared/banner/banner.controller.js"></script>
+    <script src="component/login/auth.service.js"></script>
+    <script src="app.run.js"></script>
+    <script src="shared/navBar/navBar.controller.js"></script>
+    <script src="shared/navBar/navBar.directive.js"></script>
+    <script src="component/dashboard/dashBoard.controller.js"></script>
 
 
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/app.css">
 </head>
 
 
 <body ng-app="myApp">
 
+<div>
+    <nav-bar/>
+</div>
+
+<div class="mainContainer">
     <ui-view/>
-<!--<div>-->
-<!--<p>Name : <input type="text" ng-model="name"></p>-->
-<!--<h1>Hello  {{name}}</h1>-->
-<!--</div>-->
+</div>
 
 </body>
-
-
 </html>
