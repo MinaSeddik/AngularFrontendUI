@@ -12,5 +12,8 @@
     // enable / disable debug mode
     window.__env.enableDebug = true;
 
+    // cookie prefix
+    COOKIE_PREFIX = 'MyApp_';
+
 
 }(this));

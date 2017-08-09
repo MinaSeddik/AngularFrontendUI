@@ -7,20 +7,19 @@ if (window) {
     Object.assign(env, window.__env);
 }
 
-var app = angular.module('myApp', ['ui.router']);
+var app = angular.module('myApp', ['ui.router', 'ngCookies']);
 
 app.constant('__env', env);
 
-
-app.config(['$qProvider', '$stateProvider', '$urlRouterProvider', '$logProvider',
-    function ($qProvider, $stateProvider, $urlRouterProvider, $logProvider) {
+app.config(['$qProvider', '$stateProvider', '$urlRouterProvider', '$logProvider', '$httpProvider',
+    function ($qProvider, $stateProvider, $urlRouterProvider, $logProvider, $httpProvider) {
 
         $qProvider.errorOnUnhandledRejections(false);
 
         $stateProvider
             .state('login', {
                 url: '/login',
-                controller: 'dashBoardCtrl',
+                controller: 'loginCtrl',
                 templateUrl: "component/login/login.html"
             })
             .state('home', {

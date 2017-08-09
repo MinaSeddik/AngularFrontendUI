@@ -3,10 +3,11 @@
 app.directive('navBar', ['Auth', function (Auth) {
 
     return {
-        restrict : 'E',
+        restrict : 'EA',
         controller: 'navBarCtrl',
         templateUrl: 'shared/navBar/navBar.html',
-        replace: "false"
+        replace: "true"
+
     };
 
 }]);

@@ -91,6 +91,9 @@ body{
 .mainContainer{
     position: absolute;
     top: 60px;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 .wrapper{
@@ -98,17 +101,13 @@ body{
     top: 50%;
     left: 50%;
     width:30em;
-    height:18em;
+    height:19em;
     margin-top: -9em; /*set to a negative number 1/2 of your height*/
     margin-left: -15em; /*set to a negative number 1/2 of your width*/
     border: 1px solid #ccc;
     background-color: #f3f3f3;
     border-radius: 10px;
 }
-
-/*.wrapper.input {*/
-    /*margin: 10px;*/
-/*}*/
 
 .wrapper .form-signin-heading{
     margin: 20px 10px 20px 8px;
