@@ -7,7 +7,7 @@ if (window) {
     Object.assign(env, window.__env);
 }
 
-var app = angular.module('myApp', ['ui.router', 'ngCookies']);
+var app = angular.module('myApp', ['ngRoute', 'ui.router', 'ngCookies', 'ngTagsInput']);
 
 app.constant('__env', env);
 
@@ -26,6 +26,11 @@ app.config(['$qProvider', '$stateProvider', '$urlRouterProvider', '$logProvider'
                 url: '/home',
                 controller: 'dashBoardCtrl',
                 templateUrl: "component/dashboard/dashboard.html"
+            })
+            .state('textbox', {
+                url: '/cntl/textbox',
+                controller: 'SimpleCtrl',
+                templateUrl: "component/controllers/textbox.html"
             });
 
         $urlRouterProvider.when('', '/');
@@ -34,5 +39,7 @@ app.config(['$qProvider', '$stateProvider', '$urlRouterProvider', '$logProvider'
 
 
         $logProvider.debugEnabled(__env.enableDebug);
+
+        $httpProvider.defaults.withCredentials = true;
 
     }]);

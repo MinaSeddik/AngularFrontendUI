@@ -1,0 +1,98 @@
+<div>
+
+    <h1 class="page-header">Textbox Control
+    </h1>
+
+
+    <div class="row">
+
+        <label>This is a simple label and the current data is {{txtData}}</label>
+
+        <br>
+
+        <input type="text" placeholder="simple text box without any style" size="50" ng-model="txtData"/>
+
+        <br>
+        <br>
+
+
+        <input type="password" placeholder="simple text box for password" size="35" ng-model="txtData"/>
+
+        <br>
+        <br>
+
+        <input type="text" class="form-control" placeholder="text box with form-control class" autofocus=""
+               ng-model="txtData"/>
+
+        <br>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <input type="text" class="form-control" ng-model="txtData"/>
+            </div>
+
+            <div class="col-md-1">
+                <button class="btn btn-primary">Go</button>
+            </div>
+
+        </div>
+
+
+        <br>
+
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" ng-model="txtData"/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <br>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="input-group">
+            <span class="input-group-btn">
+            <button class="btn btn-primary" type="button">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+            </span>
+                    <input type="text" class="form-control" placeholder="Search" ng-model="txtData"/>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <tags-input ng-model="cities"
+                    placeholder="Add a City"
+                    display-property="name"
+                    replace-spaces-with-dashes="false"
+                    add-from-autocomplete-only="true"
+                    on-tag-added="tagAdded($tag)"
+                    on-tag-removed="tagRemoved($tag)">
+            <auto-complete source="loadCities($query)"
+                           min-length="0"
+                           debounce-delay="0"
+                           max-results-to-show="10"></auto-complete>
+
+        </tags-input>
+
+        <br>
+        <label><strong>Selected cities :</strong> {{cities}} </label>
+
+    </div>
+
+</div>

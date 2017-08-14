@@ -74,11 +74,11 @@ body{
     font-weight: 600;
 }
 
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active {
+.navbar .btn-primary,
+.navbar .btn-primary:hover,
+.navbar .btn-primary:focus,
+.navbar .btn-primary:active,
+.navbar .btn-primary.active {
     color: teal;
     background-image: none;
     background-color: #a6d7cc;
@@ -110,7 +110,7 @@ body{
 }
 
 .wrapper .form-signin-heading{
-    margin: 20px 10px 20px 8px;
+    margin: 20px 10px 20px 18px;
 }
 
 .wrapper .checkbox {
@@ -119,11 +119,11 @@ body{
 }
 
 .wrapper .btn {
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 150px;
 }
 
 .wrapper input {
-    margin-left: 6px;
-    margin-bottom: 8px;
+    margin-left: 16px;
+    margin-bottom: 10px;
 }
